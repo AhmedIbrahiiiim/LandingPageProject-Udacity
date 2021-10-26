@@ -92,5 +92,5 @@ function linkClick(link) {
   let linkId = link.currentTarget.getAttribute("href");
   document
     .querySelector(linkId)
-    .scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+    .scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
 }
