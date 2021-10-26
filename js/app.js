@@ -80,3 +80,17 @@ links.forEach((link) => {
     }
   };
 });
+
+// Links Smooth Scrolling
+links.forEach((link) => link.addEventListener("click", linkClick));
+function linkClick(link) {
+  smoothScroll(link); // Call the "smoothScroll" function
+}
+function linkClick(link) {
+  link.preventDefault();
+  // Getting The Href For Choosing The Section
+  let linkId = link.currentTarget.getAttribute("href");
+  document
+    .querySelector(linkId)
+    .scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+}
